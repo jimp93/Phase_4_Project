@@ -49,25 +49,19 @@ We analyzed the workings of the best performing model to see which words were mo
 **The two best performing models, out of the 24 created, predicted the correct labels almost 80 percent of the time.** <br>
 <br>
 <br>
-<img src="images/shutterstock_1730598724.jpg" style="width: 700px;"/>
 
 **The best-performing model struggled most with stories  in the world-news, business and lifestyle categories as these tend to be more loosely defined and overlap with other categories.** <br>
 <br>
-<br>
-
-
-<img src="images/shutterstock_1721153281.jpg" style="width: 700px;"/>
 <br>
 <br>
 
 **The model's internal decision making process can analyzed to reveal which words are the most important in predicting category labels, whether across the whole corpus, each category or individual articles. providing potentially valuable hidden insights.**
 <br>
 
-<img src="images/shutterstock_507639565.jpg" style="width: 700px;"/>
 <br>
 <br>
 
-
+<img src="images/shutterstock_1721153281.jpg" style="width: 700px;"/>
 
 ### Conclusion
 
@@ -75,6 +69,7 @@ We analyzed the workings of the best performing model to see which words were mo
 
 * It also generates useful insights, potentially revealing hidden threads that run through categories and generating story angles. It can also help in analysing reporting standards in our own copy.
 
+<img src="images/shutterstock_1730598724.jpg" style="width: 700px;"/>
 
 ### Next steps
 
