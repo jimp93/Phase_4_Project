@@ -21,7 +21,7 @@ To produce an accurate model that will automate the process of tagging news arti
 The newspaper is interested in finding any hidden trends in each category and in articles that generate the most social media interest. <br>
 
 
-<img src="Viz/log_res.png" style="width: 700px;"/>
+<img src="images/shutterstock_1730598724.jpg" style="width: 700px;"/>
 <br>
 <br>
 
