@@ -1,0 +1,41 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from nltk.tokenize import RegexpTokenizer
+import json
+from nltk.corpus import stopwords
+
+with open('C:/Users/james/Documents/Flatiron/p4_project/filtered_df.json','r') as datafile:
+    data = json.load(datafile)
+filtered_df=pd.DataFrame(data)
+
+set_250k = filtered_df.sample(n=250000, random_state=5)
+X_250 = pd.DataFrame(set_250k['bodyText'])
+y_250 = pd.DataFrame(set_250k['sectionId'])
+X250_train, X250_test, y250_train, y250_test = train_test_split(X_250, y_250, test_size=0.2, random_state=42)
+for df in [X250_train, X250_test, y250_train, y250_test]:
+    df.reset_index(drop=True, inplace=True)
+
+stopwords_list = stopwords.words('english')
+def remove_stopwords(token_list):
+    stopwords_removed = [token for token in token_list if token not in stopwords_list]
+    return stopwords_removed
+
+basic_token_pattern = r"(?u)\b\w\w+\b"
+tokenizer = RegexpTokenizer(basic_token_pattern)
+X250_train['bodyTextlow'] = X250_train['bodyText'].str.lower()
+X250_train["text_tokenized"] = X250_train['bodyTextlow'].apply(tokenizer.tokenize)
+X250_train["text_tokenized"] = X250_train["text_tokenized"].apply(lambda x: remove_stopwords(x))
+X250_train['join_nostop'] = X250_train['text_tokenized'].apply(lambda x: " ".join(x))
+X250_test['bodyTextlow'] = X250_test['bodyText'].str.lower()
+X250_test["text_tokenized"] = X250_test['bodyTextlow'].apply(tokenizer.tokenize)
+
+
+X250_train.to_csv('X250_train_full.csv')
+X250_test.to_csv('X250_test_full.csv')
+y250_train.to_csv('y250_train_full.csv')
+y250_test.to_csv('y250_test_full.csv')
+
+
+
+
+
