@@ -69,7 +69,7 @@ We analyzed the workings of the best performing model to see which words were mo
 
 * It also generates useful insights, potentially revealing hidden threads that run through categories and generating story angles. It can also help in analysing reporting standards in our own copy.
 
-<img src="images/shutterstock_1721153281.jpg" style="width: 700px;"/>
+<img src="Viz/le_tensor_google.jpg" style="width: 700px;"/>
 
 ### Next steps
 
